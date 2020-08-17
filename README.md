@@ -1,0 +1,1 @@
+# minimal-react-ts-jest-webpack
