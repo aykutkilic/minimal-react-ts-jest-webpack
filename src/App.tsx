@@ -1,5 +1,11 @@
 import React, { useState } from 'react'
 
+declare namespace JSX {
+    interface IntrinsicElements {
+        button: any;
+    }
+}
+
 const App = () => {
     const [text, setText] = useState<string>()
 
@@ -8,7 +14,7 @@ const App = () => {
     }
 
     return (<>
-        <>Hello World{{ text }}{text}</>
+        <>Hello World{text}</>
         <button id="btn1" onClick={onClick}>Click</button>
     </>)
 }

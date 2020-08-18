@@ -8,12 +8,12 @@ describe('Some suite', () => {
         expect(screen.queryByText("Hello World")).not.toBeNull();
     });
 
-    it("should fetch a weather forecast upon tapping the button", async () => {
+    it("should add ! to Hello World", async () => {
         render(<App />);
-        const btn1 = screen.queryByText("btn1");
+        const btn1 = screen.queryByText("Click");
         if (!btn1) fail('No button with id btn1')
         fireEvent.click(btn1);
-        await screen.findByText("New York", { exact: false });
-        expect(screen.queryByText("°", { exact: false })).not.toBeNull();
+        await screen.findByText("Hello World!", { exact: false });
+        expect(screen.queryByText("!", { exact: false })).not.toBeNull();
     });
 })
