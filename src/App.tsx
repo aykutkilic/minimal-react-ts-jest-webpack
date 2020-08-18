@@ -10,7 +10,7 @@ const App = () => {
     const [text, setText] = useState<string>()
 
     const onClick = () => {
-        setText('!')
+        setText('!!')
     }
 
     return (<>

@@ -13,7 +13,7 @@ describe('Some suite', () => {
         const btn1 = screen.queryByText("Click");
         if (!btn1) fail('No button with id btn1')
         fireEvent.click(btn1);
-        await screen.findByText("Hello World!", { exact: false });
-        expect(screen.queryByText("!", { exact: false })).not.toBeNull();
+        await screen.findByText("Hello World!!", { exact: false });
+        expect(screen.queryByText("!!", { exact: false })).not.toBeNull();
     });
 })
