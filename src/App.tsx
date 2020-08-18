@@ -1,10 +1,5 @@
 import React, { useState } from 'react'
-
-declare namespace JSX {
-    interface IntrinsicElements {
-        button: any;
-    }
-}
+import Button from '@material-ui/core/Button'
 
 const App = () => {
     const [text, setText] = useState<string>()
@@ -15,7 +10,7 @@ const App = () => {
 
     return (<>
         <>Hello World{text}</>
-        <button id="btn1" onClick={onClick}>Click</button>
+        <Button color="primary" variant="contained" onClick={onClick}>Click</Button>
     </>)
 }
 
